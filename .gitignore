@@ -18,8 +18,7 @@
 *.cb
 *.cb2
 *.lb
-#Versuch_*.pdf
-Bachelothesis_Schatt.pdf
+Versuch_*.pdf
 .DS_Store
 
 ## Intermediate documents:
@@ -289,8 +288,6 @@ TSWLatexianTemp*
 *.xwm
 
 #Daten
-*.avi
-*_1611072U1.TXT
 
 
 #Ignore these foldes
