@@ -40,6 +40,8 @@
 \usepackage{pdfpages}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{subcaption}
+
 
 % Abschnittseinrückung und -abstand
 % Die folgenden Zeilen sollen möglichst nicht verändert werden
@@ -64,6 +66,11 @@
 \pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
 \graphicspath{{./bilder/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
 \VerbatimFootnotes            % \verb etc.
+
+% Caption und figure setup
+\captionsetup{labelfont={bf,sc}}
+
+
 
 % Funktionen
 \newcommand\tab[1][1cm]{\hspace*{#1}}
