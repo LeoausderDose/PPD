@@ -15,36 +15,36 @@ legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray20
 tick align=outside,
 tick pos=left,
 x grid style={lightgray203},
-xlabel={concentration / mg per ml},
+xlabel={thickness / nm},
 xmajorgrids,
-xmin=-13.95, xmax=314.95,
+xmin=0, xmax=500,
 xtick style={color=black},
 y grid style={lightgray203},
-ylabel={heterogenity},
+ylabel={heterogeneity},
 ymajorgrids,
 ymin=-16.1709065832112, ymax=339.589038247436,
 ytick style={color=black}
 ]
 \addplot [ultra thick, dodgerblue0143213]
 table {%
-1 0
-25 102.951273454399
-50 260.109320108062
-100 45.4580969214582
-200 230.901253116566
-250 92.3486037681464
-300 40.4234374272009
+0 0
+54.8 102.951273454399
+184.333333333333 260.109320108062
+506.916666666667 45.4580969214582
+1608.61666666667 230.901253116566
+2390.2 92.3486037681464
+3603.6 40.4234374272009
 };
 \addlegendentry{reflection}
 \addplot [ultra thick, tomato2527948]
 table {%
-1 0
-25 185.671998182523
-50 67.8828757163584
-100 29.0913787966606
-200 323.418131664225
-250 52.4743060151849
-300 63.3585514325261
+0 0
+79.5 185.671998182523
+186.633333333333 67.8828757163584
+512.55 29.0913787966606
+1594.4 323.418131664225
+2433.08333333333 52.4743060151849
+3483.85 63.3585514325261
 };
 \addlegendentry{transmission}
 \end{axis}

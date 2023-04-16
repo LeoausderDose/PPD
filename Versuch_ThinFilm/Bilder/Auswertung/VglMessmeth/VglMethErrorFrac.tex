@@ -1,0 +1,37 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{dodgerblue0143213}{RGB}{0,143,213}
+\definecolor{lightgray203}{RGB}{203,203,203}
+\definecolor{whitesmoke240}{RGB}{240,240,240}
+
+\begin{axis}[
+axis background/.style={fill=whitesmoke240},
+axis line style={whitesmoke240},
+tick align=outside,
+tick pos=left,
+x grid style={lightgray203},
+xlabel={rotation speed / rpm},
+xmajorgrids,
+xmin=225, xmax=6275,
+xtick style={color=black},
+y grid style={lightgray203},
+ylabel={error fraction / a.u.},
+ymajorgrids,
+ymin=33.6365966556009, ymax=665.114384574023,
+ytick style={color=black}
+]
+\addplot [ultra thick, dodgerblue0143213]
+table {%
+500 636.410848759549
+750 123.173641739447
+1000 62.3401324700746
+2000 108.439051217311
+3000 106.413349856621
+4000 167.259174437374
+5000 400.186003381121
+6000 119.684876758419
+};
+\end{axis}
+
+\end{tikzpicture}

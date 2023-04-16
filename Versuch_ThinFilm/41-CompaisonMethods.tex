@@ -8,52 +8,81 @@ As can be seen in Figure \ref{fig:SpecRefTrans}, the measured spectra in transmi
 observed spectral range. This is an indicator for a lower layer thickness as can be concluded from equation \ref{eq:lamdathick}, as we expect since faster spinning in coating leads to 
 bigger centrifugal forces on the solution during coating. This intuitive explanation is also reflected in the experimentally determined Schubert equation. 
 
-Furthermore we determined the mean values and the standard deviation for every measurement on the same sample. To verify wether the is a 
-connection between the 
-
-
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{0.70\textwidth}
-        \centering
-        \input{Bilder/Auswertung/VglMessmeth/VglMessmethrefl500adn5000.tex}
-        \caption{$y=x$}
-        \label{fig:y equals x}
-    \end{subfigure}  
-    
-
-    \begin{subfigure}[b]{0.70\textwidth}
-        \centering
-        \input{Bilder/Auswertung/VglMessmeth/VglMessmethtrans500adn5000.tex}   
-        \caption{$y=3\sin x$} 
-        \label{fig:three sin x}
-    \end{subfigure}
-
-    \caption{Spectra measured in reflectance and transmission on a thin film of PS on Glass. The films are coated with different coating speeds.}
-    \label{fig:SpecRefTrans}
-\end{figure}
-
 When using the thickness output of the Nanocalc program, we observe a decrease in the coating thickness for lower concentrations of the coating solution as well as for higher rotational speeds as depicted in Figure \ref{fig:thickconcrpm}.
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}[b]{\textwidth}
-        \centering
-        %\resizebox{8cm}{6cm}{
-        \input{Bilder/Auswertung/VglMessmeth/VglMethConcThick.tex}
-        %}
-        \caption{Thickness of the film against rotation speed during coating}
-        \label{fig:VglMethConcThick}
-    \end{subfigure}
+    \input{Bilder/Auswertung/VglMessmeth/VglMethErrorFrac.tex}
+    \caption{The standard deviation divided by the fit error}
+    \label{fig:errorFrac}
 
-    \vspace{1cm}
-    \begin{subfigure}[b]{\textwidth}
-        \centering
-        \input{Bilder/Auswertung/VglMessmeth/VglMethRotThick2.tex}   
-        \caption{Thickness of the film against PS concentration of the coated solution} 
-        \label{fig:VglMethRotThick}
-    \end{subfigure}
-
-    \caption{Thickness output of the program \textit{NanoCalc} averaged for 6 measurement.}
-    \label{fig:thickconcrpm}
 \end{figure}
+
+Furthermore we determined the mean values and the standard deviation for every measurement on the same sample. To verify wether the is a 
+linear connection between the two errors we plot the fraction of those two quantities as depicted in Figure \ref{fig:errorFrac}. We were not able to find a connection.
+In our interpretation the deviations are not linked since the do not have the same origin. The standard deviation in film thickness is 
+not an error of measurement but a real local varriation of the film  thickness. The fit error in contrast is a real error. Therefore those two quantities are not linked.
+
+
+
+To investigate this heterogeneity
+
+\begin{equation}
+    h = \frac{< d >}{std(d)}
+\end{equation}
+
+in more detail, we plot it against the thickness of the layer. As can be noted in Figure \ref{fig:thickheter}, the heterogeneity
+increases for lower film thickness. The last point at \SI{0}{\nano\meter} has not to be taken into account since at this point the heterogeneity loses its meaning as all measurement 
+return as thickness \SI{0}{\nano\meter}.
+
+\begin{figure}[h]
+    \centering
+    \input{Bilder/Auswertung/VglMessmeth/VglMethConcHeter.tex}
+    \caption{Heterogeneity $h$ against film thickness.}
+    \label{fig:thickheter}
+\end{figure}
+
+% \begin{figure}[h]
+%     \centering
+%     \begin{subfigure}[b]{0.70\textwidth}
+%         \centering
+%         \input{Bilder/Auswertung/VglMessmeth/VglMessmethrefl500adn5000.tex}
+%         \caption{$Reflectance$}
+%         \label{fig:y equals x}
+%     \end{subfigure}  
+    
+
+%     \begin{subfigure}[b]{0.70\textwidth}
+%         \centering
+%         \input{Bilder/Auswertung/VglMessmeth/VglMessmethtrans500adn5000.tex}   
+%         \caption{$Transmission$} 
+%         \label{fig:three sin x}
+%     \end{subfigure}
+
+%     \caption{Spectra measured in reflectance and transmission on a thin film of PS on Glass. The films are coated with different coating speeds.}
+%     \label{fig:SpecRefTrans}
+% \end{figure}
+
+
+% \begin{figure}[h]
+%     \centering
+%     \begin{subfigure}[b]{\textwidth}
+%         \centering
+%         %\resizebox{8cm}{6cm}{
+%         \input{Bilder/Auswertung/VglMessmeth/VglMethConcThick.tex}
+%         %}
+%         \caption{Thickness of the film against rotation speed during coating}
+%         \label{fig:VglMethConcThick}
+%     \end{subfigure}
+
+%     \vspace{1cm}
+%     \begin{subfigure}[b]{\textwidth}
+%         \centering
+%         \input{Bilder/Auswertung/VglMessmeth/VglMethRotThick2.tex}   
+%         \caption{Thickness of the film against PS concentration of the coated solution} 
+%         \label{fig:VglMethRotThick}
+%     \end{subfigure}
+
+%     \caption{Thickness output of the program \textit{NanoCalc} averaged for 6 measurement.}
+%     \label{fig:thickconcrpm}
+% \end{figure}
