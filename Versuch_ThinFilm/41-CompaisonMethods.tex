@@ -4,12 +4,15 @@
 In the following section the difference in results performing white light reflectometry in reflection
 and transmission is analyzed and discussed.
 
-As can be seen in Figure ref, the measured spectra in transmission and reflection show the same tendencies with regard to the position and number of minima and maxima. The films which are coated with a higher speed of rotation show less minnima and maxima in the 
+As can be seen in Figure \ref{fig:SpecRefTrans}, the measured spectra in transmission and reflection show the same tendencies with regard to the position and number of minima and maxima. The films which are coated with a higher speed of rotation show less minima and maxima in the 
 observed spectral range. This is an indicator for a lower layer thickness as can be concluded from equation \ref{eq:lamdathick}, as we expect since faster spinning in coating leads to 
 bigger centrifugal forces on the solution during coating. This intuitive explanation is also reflected in the experimentally determined Schubert equation. 
 
+Furthermore we determined the mean values and the standard deviation for every measurement on the same sample. To verify wether the is a 
+connection between the 
 
-\begin{figure}[ht]
+
+\begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.70\textwidth}
         \centering
@@ -27,5 +30,30 @@ bigger centrifugal forces on the solution during coating. This intuitive explana
     \end{subfigure}
 
     \caption{Spectra measured in reflectance and transmission on a thin film of PS on Glass. The films are coated with different coating speeds.}
-    \label{fig:three graphs}
+    \label{fig:SpecRefTrans}
+\end{figure}
+
+When using the thickness output of the Nanocalc program, we observe a decrease in the coating thickness for lower concentrations of the coating solution as well as for higher rotational speeds as depicted in Figure \ref{fig:thickconcrpm}.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        %\resizebox{8cm}{6cm}{
+        \input{Bilder/Auswertung/VglMessmeth/VglMethConcThick.tex}
+        %}
+        \caption{Thickness of the film against rotation speed during coating}
+        \label{fig:VglMethConcThick}
+    \end{subfigure}
+
+    \vspace{1cm}
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \input{Bilder/Auswertung/VglMessmeth/VglMethRotThick2.tex}   
+        \caption{Thickness of the film against PS concentration of the coated solution} 
+        \label{fig:VglMethRotThick}
+    \end{subfigure}
+
+    \caption{Thickness output of the program \textit{NanoCalc} averaged for 6 measurement.}
+    \label{fig:thickconcrpm}
 \end{figure}

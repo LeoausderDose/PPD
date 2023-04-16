@@ -1,0 +1,60 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{dodgerblue0143213}{RGB}{0,143,213}
+\definecolor{lightgray203}{RGB}{203,203,203}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{tomato2527948}{RGB}{252,79,48}
+\definecolor{whitesmoke240}{RGB}{240,240,240}
+
+\begin{axis}[
+axis background/.style={fill=whitesmoke240},
+axis line style={whitesmoke240},
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204,
+  fill=whitesmoke240
+},
+tick align=outside,
+tick pos=left,
+x grid style={lightgray203},
+xlabel={concentration / mg per ml},
+xmajorgrids,
+xmin=-13.95, xmax=314.95,
+xtick style={color=black},
+y grid style={lightgray203},
+ylabel={thickness / nm},
+ymajorgrids,
+ymin=-180.18, ymax=3783.78,
+ytick style={color=black}
+]
+\addplot [ultra thick, dodgerblue0143213]
+table {%
+1 0
+25 54.8
+50 184.333333333333
+100 506.916666666667
+200 1608.61666666667
+250 2390.2
+300 3603.6
+};
+\addlegendentry{reflection}
+\addplot [ultra thick, tomato2527948]
+table {%
+1 0
+25 79.5
+50 186.633333333333
+100 512.55
+200 1594.4
+250 2433.08333333333
+300 3483.85
+};
+\addlegendentry{transmission}
+\end{axis}
+
+\end{tikzpicture}
