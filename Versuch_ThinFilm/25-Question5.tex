@@ -1,0 +1,35 @@
+\section{Reflectance}
+\label{sec:Reflectance}
+The reflectance $R$ of a material can easily be calculated by using the boundary conditions of a surface. The tangential components of the magnetic field $\mathbf{H}$ vanish at the boundary:
+\begin{equation}
+    0 = \mathbf{\hat{n}} \times (\mathbf{H_3} - \mathbf{H_2} - \mathbf{H_1})|_{x=0},
+\end{equation}
+where the index 1 refers to the incoming wave, 2 to the reflected wave and 3 to the transmitted wave. Using the equations
+\begin{align}
+    \mathbf{H} &= - \frac{\mathbf{k}}{k} \times \mathbf{E} \\
+    k &= \frac{\omega}{c} \sqrt{\mu_0 \epsilon_0}
+\end{align}
+with the wave vector $\mathbf{k}$, wave frequency $\omega$ and dielectric constants $\mu_0$ and $\epsilon_0$, and considering the relation inside the medium
+\begin{equation}
+    \mathbf{k} \times \mathbf{E} = \frac{\omega}{c} \mu \mathbf{H}
+\end{equation}
+with the dielectic constant $\mu$ inside the medium one gets assuming the unit vector $\mathbf{\hat{n}}$ points in x-direction:
+\begin{equation}
+    0 \overset{!}{=} H_z = -E_{0,1y} + E_{0,2y} + \sqrt{\frac{\epsilon}{\mu}} E_{0,3y}, \label{eq:a5.1}
+\end{equation}
+where E_{0,iy} is the absolute value amplitude of the electric field of the wave $\mathbf{E_i}$ and the indicies $i$ refer to the waves as stated above. \par 
+In the same way, it can be used that the tangential components of the electric field $\mathbf{E}$ vanish:
+\begin{align}
+    0 &= \mathbf{\hat{n}} \times (\mathbf{E_3} - \mathbf{E_2} - \mathbf{E_1})|_{x=0} \\
+    &= (\mathbf{E_{0,3}} - \mathbf{E_{0,2}} \mathbf{E_{0,1}}) e^{i\omega t} \qquad |\cdot \mathbf{\hat{e_y}} \\
+    \Leftrightarrow E_{0,3y} &= E_{0,1y} + E_{0,2y} \label{eq:a5.2}
+\end{align}
+Now one can use equations~\ref{eq:a5.1} and~\ref{eq:a5.2} to eliminate the part of the transmitted wave (index 3), which results in 
+\begin{equation}
+    \frac{E_{0,1y}}{E_{0,2y}} = \frac{1- \sqrt{\frac{\epsilon}{\mu}}}{1+ \sqrt{\frac{\epsilon}{\mu}}} = \frac{1- \mu^{-1} \tilde{n}}{1+ \mu^{-1} \tilde{n}} \overset{\mu \approx 1}{\approx} \frac{1-\tilde{n}}{1+ \tilde{n}},
+\end{equation}
+where the refractive index $\tilde{n} = \sqrt{\epsilon \mu}$ was introduced and it was used that $\mu \approx 1$ for most mediums. Now the reflectance $R$ can easily be calculated as 
+\begin{equation}
+    R = \frac{|E_{0,1y}|^2}{|E_{0,1y}|^2} = \frac{|1- \tilde{n}|^2}{|1+ \tilde{n}|^2} = \frac{|1-n-i\kappa|^2}{|1+n+i\kappa|^2} = \frac{(n-1)^2+\kappa^2}{(n+1)^2+\kappa^2},
+\end{equation} 
+where the refractive index $\tilde{n}$ was split into its real part $n$ and its imaginary part $\kappa$.
