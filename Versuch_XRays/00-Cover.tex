@@ -30,35 +30,35 @@
 \def\farbe{Notagrey}
 \def\fach{PPD}
 \def\name{Matteo Kumar - Leonhard Schatt}
-\def\uberschrift{Vorlage} % Absatz mit \\[0,5cm]; u = Übung, k = Klausur; s = Skript, e = Ergebnis
+\def\uberschrift{Thin film processing techniques and white \\[5pt] light reflectometry} % Absatz mit \\[0,5cm]; u = Übung, k = Klausur; s = Skript, e = Ergebnis
 \def\bottom{SS 2023}
 \def\datum{\today}
 \def\platz{}
-\def\betreuer{Betreuer}
+\def\betreuer{Fabian Eller}
 \def\groupnr{2}
 
 \begin{titlepage}
 			
 	\centering
-	{\LARGE \sffamily {\textbf{\bottom}\par}}
-	\vspace{2,5cm}
-    {\fontsize{40}{0}\sffamily\ruleline{\textcolor{\farbe}{\textbf{\fach}}}\par}
-    \vspace{6cm}
+	{\LARGE \bf \bottom} \\[3ex]	\vspace{2.5cm}
+    {\fontsize{30}{0}\sffamily\ruleline{\textcolor{\farbe}{\textbf{\fach}}}\par}
+    \vspace{5cm}
 	{\Large\sffamily \ruleline{\name}\par}
 	
 	
-	% Choose Text
-	\ifthenelse{\equal{\uberschrift}{s}} {\def\titel{Skript}}	
-		{\ifthenelse{\equal{\uberschrift}{k}} {\def\titel{Klausur}}
-			{\ifthenelse{\equal{\uberschrift}{u}} {\def\titel{Übung}}
-				{\ifthenelse{\equal{\uberschrift}{e}} {\def\titel{Klausur \\[0,5cm] Ergebnis}}
-					{\def\titel{\uberschrift}}
-				}
-			}
-		}
+	% % Choose Text
+	% \ifthenelse{\equal{\uberschrift}{s}} {\def\titel{Skript}}	
+	% 	{\ifthenelse{\equal{\uberschrift}{k}} {\def\titel{Klausur}}
+	% 		{\ifthenelse{\equal{\uberschrift}{u}} {\def\titel{Übung}}
+	% 			{\ifthenelse{\equal{\uberschrift}{e}} {\def\titel{Klausur \\[0,5cm] Ergebnis}}
+	% 				{\def\titel{\uberschrift}}
+	% 			}
+	% 		}
+	% 	}
 	
 	\begin{textblock*}{21cm}(0cm,9cm) % {block width} (coords), centered		
-		{\fontsize{\schriftgrosse}{0}\sffamily\textcolor{\farbe}{\textbf{\titel}}\par}
+		{\huge \textbf{\uberschrift}} \\[3ex]
+		%{\fontsize{\schriftgrosse}{0}\sffamily\textcolor{\farbe}{\textbf{\titel}}\par}
 	\end{textblock*}
 	
 	% Choose Logo
@@ -81,7 +81,7 @@
 	
 	% Gruppe
 	\vspace{10cm}
-	{\large\sffamily{Gruppe \groupnr}}
+	{\large\sffamily{Group \groupnr}}
 	
 	%Logo
 	\vfill
@@ -99,18 +99,20 @@
 	
 \end{titlepage}
 
-\restoregeometry
+\vspace{3 cm}
 
+\restoregeometry
+\newpage
 % Information
-\chapter*{Informationen}
+\chapter*{Information}
 \label{chap:info}
 
 \begin{tabular}{l l}
 
-	{\textbf{Versuchstag}} \hspace{1cm} & \hspace{1cm} {\datum}\\[0,2cm]
-	{\textbf{Versuchsplatz}} \hspace{1cm} & \hspace{1cm} {\platz}\\[0,2cm]
-	{\textbf{Betreuer}} \hspace{1cm} & \hspace{1cm} {\betreuer}\\[1,2cm]
-	{\textbf{Gruppen Nr.}} \hspace{1cm} & \hspace{1cm} {\groupnr}\\[0.2cm]
+	{\textbf{Date}} \hspace{1cm} & \hspace{1cm} {\datum}\\[0,2cm]
+	%{\textbf{Versuchsplatz}} \hspace{1cm} & \hspace{1cm} {\platz}\\[0,2cm]
+	{\textbf{Supervisor}} \hspace{1cm} & \hspace{1cm} {\betreuer}\\[1,2cm]
+	{\textbf{Group number}} \hspace{1cm} & \hspace{1cm} {\groupnr}\\[0.2cm]
 %	{\textbf{Auswertperson}} \hspace{1cm} & \hspace{1cm} {\auswertp}\\[0.2cm]
 %	{\textbf{Messperson}} \hspace{1cm} & \hspace{1cm} {\messp}\\[0.2cm]
 %	{\textbf{Protokollperson}} \hspace{1cm} & \hspace{1cm} {\protop}\\[0.2cm]
