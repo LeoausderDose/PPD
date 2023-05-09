@@ -1,0 +1,25 @@
+%Matteo Kumar - Leonard Schatt
+% Fortgeschrittenes Physikalisches Praktikum
+ 
+\section{Powder Diffraction}\label{sec:Q7}
+
+A peak in a powder diffractogram can be described by its profile, location and amplitude. The location hints the lattice type and lattice parameters. For instance, for a cubic lattice, the angles $\vartheta$ have to fulfill the condition 
+\begin{equation}
+    \sin^2\vartheta = \frac{\lambda^2}{4a^2}(h^2+k^2+l^2),
+\end{equation}
+where the wavelength $\lambda$ is known, $a$ is the lattice parameter and $h$,$k$,$l \in \mathbb{N}$ are the Miller indices. Therefore, the values of $\sin^2\vartheta$ can be calculated via the location of the peaks (at $2\vartheta$). Those have to be a integer multiple of $\frac{\lambda^2}{4a^2}$. Because the Miller indices are small for small diffraction angles, ($h$ $k$ $l$) can be guessed startig by (1 0 0). For more complicated lattices, the usage of computational programs is obligatory~\cite{Bohm.2021}. In some cases, $N=h^2+k^2+l^2 \in \mathbb{N}$ can be obtained by different lattice planes, i.e.~by different combinations of $h$,$k$,$l$. For example, $N=9=3^2+0^2+0^2=2^2+2^2+1^2$, which corresponds to the planes (3 0 0) and (2 1 1). In such a case, the ratio of the intensities of the peaks in the powder diffractogram corresponds to the ratio of the number of different planes represented by the respective value of $N$~\cite{Bohm.2021}. The peaks underlie a broadening which depends on the size of the used crystallites. Scherrer found the relation
+\begin{equation}
+    \beta_L = \frac{K\lambda}{L\cos\vartheta},
+\end{equation}
+where $\beta_L$ is the width of the reflection, $\lambda$ is the known wavelength, $K$ is a constant depending on the setup, $L$ is the average crystallite size and $\vartheta$ is the diffraction angle. However, the determination of $L$ can be erroneous if additional parameters have to be taken in account, e.g.~tension induced during the grinding of the powder~\cite{Bohm.2021}. Further parameters influencing the deformation or displacement of peaks are the transparency of the powder, the axial divergence (the deformation) of the incoming beam, an overlay of the $K_{\alpha}$ and $K_{\beta}$ line and many more~\cite{Allmann.2003}. \par 
+The amplitude of a reflection is determined by the structure factor $S_{hkl}$, which is in some way the fourier transform of the charge density $\rho$. In an approximation, the charge density between the atoms is 0. Therefore, $S_{hkl}$ can be calculated by calculating the atomic form factor $f_j$, which describes just one atom $j$ and summing up over all atoms:
+\begin{align}
+    f_j &= \int_V \rho(\mathbf{r'_j}) \exp[i\mathbf{r'_jG}] dV' \\
+    S_{hkl} &= \sum_{j} f_j \exp[i\mathbf{r_jG}]
+\end{align}
+with the reciprocal lattice vector $\mathbf{G}$~\cite{Bohm.2021}. The total intensity of a reflection at the plane (h k l) is given by
+\begin{equation}
+    I_{hkl} = I_0 \cdot S \cdot \lambda^3 \cdot A \cdot E \cdot L \cdot P \cdot H \cdot |S_{hkl}|^2.
+\end{equation}
+$I_0$ and $\lambda$ are the intensity and wavelength of the incoming beam and $S$ is a scaling factor. $A$ and $E$ take losses in the intensity in account which occur due to absorption and extinktion because of Bragg scattering respectively.  $L$ is a factor for the Lorentz correction, which has to be considered in experiments in which the crystal is moved. Here, reflections of bigger diffraction angles stay longer in a position of reflection than ones of smaller diffraction angles and therefore their apperent intensity increases. The polarisation factor $P$ considers that the amplitude of the reflected radiation is dependent on the angle between the electric fields of incoming and outgoing radiation. The area frequency factor $H$ takes in account, that multiple planes with different Miller indices can lead to the same reflection (as described above)~\cite{Bohm.2021}. \par 
+ 
