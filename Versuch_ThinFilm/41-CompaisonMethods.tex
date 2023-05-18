@@ -1,27 +1,36 @@
 \section{Influence of the measurement method}
-\label{sec:Method}
+\label{sec:VglMeth}
 
-In the following section the difference in results performing white light reflectometry in reflection
+In the following section the difference in results using white light reflectometry in reflection
 and transmission is analyzed and discussed.
 
-As can be seen in Figure \ref{fig:SpecRefTrans}, the measured spectra in transmission and reflection show the same tendencies with regard to the position and number of minima and maxima. The films which are coated with a higher speed of rotation show less minima and maxima in the 
-observed spectral range. This is an indicator for a lower layer thickness as can be concluded from equation \ref{eq:lamdathick}, as we expect since faster spinning in coating leads to 
+As can be seen in Figure \ref{fig:SpecRefTrans}, the measured spectra in transmission and reflection show the same tendencies with regard to the position and number of minimas and maximas. The films which are coated with a higher speed of rotation show less minima and maxima in the 
+observed spectral range. This is an indicator for a lower layer thickness as can be concluded from equation \ref{eq:lamdathick}, as we expect since faster spinning leads to 
 bigger centrifugal forces on the solution during coating. This intuitive explanation is also reflected in the experimentally determined Schubert equation. 
 
-When using the thickness output of the Nanocalc program, we observe a decrease in the coating thickness for lower concentrations of the coating solution as well as for higher rotational speeds as depicted in Figure \ref{fig:thickconcrpm}.
+When using the thickness output of the \textit{Nanocalc} program, we observe a decrease in the coating thickness for lower concentrations of the coating solution as well as for higher rotational speeds as depicted in Figure \ref{fig:thickconcrpm}.
+
+% \begin{figure}[h]
+%     \centering
+%     \input{Bilder/Auswertung/VglMessmeth/VglMethErrorFrac.tex}
+%     \caption{The standard deviation divided by the fit error}
+%     \label{fig:errorFrac}
+
+% \end{figure}
 
 \begin{figure}[h]
     \centering
-    \input{Bilder/Auswertung/VglMessmeth/VglMethErrorFrac.tex}
-    \caption{The standard deviation divided by the fit error}
-    \label{fig:errorFrac}
-
+    \includegraphics[width = 10cm]{Programmien/FitFehlergegenstd/FitFehlergegenStd.pdf}
+    \caption{Fit error plotted against the standard deviation of the film thickness.}
+    \label{fig:FitFehlergegenStd}
 \end{figure}
 
-Furthermore we determined the mean values and the standard deviation for every measurement on the same sample. To verify wether the is a 
+
+Furthermore, we determined the mean values and the standard deviation for every measurement on the same sample. To verify whether the is a 
 linear connection between the two errors we plot the fraction of those two quantities as depicted in Figure \ref{fig:errorFrac}. We were not able to find a connection.
-In our interpretation the deviations are not linked since the do not have the same origin. The standard deviation in film thickness is 
-not an error of measurement but a real local varriation of the film  thickness. The fit error in contrast is a real error. Therefore those two quantities are not linked.
+In our interpretation the deviations are not linked since they do not have the same origin. The standard deviation in film thickness is 
+not an error of measurement but a real local variation of the film thickness. The fit error in contrast is a real error. Therefore those two quantities do not seem to be linked. When
+comparing the two quantities graphically as shown in Figure \ref{fig:FitFehlergegenStd}, we do not see any significant correlation.
 
 
 
@@ -42,12 +51,22 @@ return as thickness \SI{0}{\nano\meter}.
     \label{fig:thickheter}
 \end{figure}
 
+<<<<<<< HEAD
 For thin films we observe smaller standard deviation with the reflectance measurements as can be seen in Tables \ref{tab:ConcThickRef} and \ref{tab:ConcThickTrans}. We conclude therefore that the reflectance 
 measurement provides probably the more accurate measurement, since both methods observed the same films and should therefore have the same basis of measurement. The additional deviation can therefore be 
 attributed to the measurement technique. It has to be taken into account that the two methods did not exactly see the same spots on the sample. For a final judgement of this situation, the measurement could be 
 repeated on the same spots for both methods.
 
 
+=======
+To determine the more suitable mode of measurement we compared the average standard deviations. The idea is that the total standard deviation $s_{\mathrm{total}}$ consists of
+\begin{equation}
+    s_{\mathrm{total}} = \sqrt{s_{\mathrm{film}}^2 + s_{\mathrm{measurement}}^2}
+\end{equation}
+with the other two $s$ being the deviations due to heterogeneity of the film and mistakes made during measurement. As we are investigating the same films, the $s_{measurement}$ can be qualitatively analyzed 
+by comparing the total average of $s_{\mathrm{total}}$. In our experiment, the average standard deviation was nearly the same. Therefore, in our measurement there was no 
+significant difference between the transmission and reflection measurement in terms of measurement errors.
+>>>>>>> 6c3a7107fc8415400fa6e0fd57204e1effacadf1
 % \begin{figure}[h]
 %     \centering
 %     \begin{subfigure}[b]{0.70\textwidth}

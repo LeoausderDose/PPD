@@ -1,4 +1,4 @@
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.70\textwidth}
         \centering
@@ -19,15 +19,27 @@
     \label{fig:SpecRefTrans}
 \end{figure}
 
+% \begin{figure}
+%     \centering
+%     \includegraphics[]{Programmien/FitFehlergegenstd/FitFehlergegenStd.pdf}
+%     \label{fig:FitFehlergegenStd}
+%     \caption{Fit error plotted against the standard deviation of the film thickness.}
+% \end{figure}
+\begin{figure}[h]
+    \centering
+    \input{Bilder/Auswertung/VglMessmeth/VglMethErrorFrac.tex}
+    \caption{The standard deviation divided by the fit error}
+    \label{fig:errorFrac}
+
+\end{figure}
+
 
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{\textwidth}
         \centering
-        %\resizebox{8cm}{6cm}{
         \input{Bilder/Auswertung/VglMessmeth/VglMethConcThick.tex}
-        %}
-        \caption{Thickness of the film against rotation speed during coating}
+        \caption{Thickness of the film against rotation speed during coating.}
         \label{fig:VglMethConcThick}
     \end{subfigure}
 
