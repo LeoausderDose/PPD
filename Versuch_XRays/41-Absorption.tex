@@ -3,7 +3,34 @@
 
 In the following section, we are going to identify an unknown metal foil due to its absorption edges. The used setup is described in section (ref).
 The setup is able to measure the transmitted intensity in regards to a diffraction angle. The measured angle $\omega$ (=$2\Theta$) can be varied from 
-5.0° $\leqslant \, \omega \, \leqslant$ 51.0°. In the beam path, we placed two foils of thickness $d = \SI{2.5e-3}{cm}$ with a number $N$ on them. In the following, they shall be called \textit{F11} and \textit{F8} for foil 11 and 8.
-The thickness $d$ is treated as if it had no deviation. First, as in spectroscopy, a reference measurement is performed. In the 
-second step, the foils are put in place and the measurement is repeated. 
+5.0° $\leqslant \, \omega \, \leqslant$ 51.0° with a step width of 0.1°. In the beam path, we placed two foils marked with an index $N$ of thickness $d = \SI{2.5e-3}{cm}$. In the following, they shall be called \textit{F11} and \textit{F8} for foil 11 and 8.
+The thickness $d$ is treated as if it has no deviation. As in spectroscopy, a reference measurement is performed. In the 
+second measurement, one foil at a time is put in place and the measurement is repeated. 
+
+\subsection[Calibration]{Calibration of the device}
+
+Since we are not sure if the calibration of the equipment is correct, we perform our own calibration.
+For this we use the well know characteristic radiation of our Tungsten anode. The sharp peaks should be visible in the 
+intensity spectrum if they fulfill the Bragg condition
+
+\begin{equation}
+    2 d \sin{\omega} = n \lambda
+\end{equation}
+
+with $\omega$ being same angle mentioned above, $ \lambda $ being the wavelength of the spectrum and $d$ being the grid plane spacing. The cubic $\mathrm{CaF}_2$ crystal has a 
+grid plane distance 
+
+\begin{equation}
+    d_{hkl} = \sqrt{\frac{a^2}{h^2+k^2+l^2}}
+\end{equation}
+
+with $(hkl) = (220) $ being the Laue indexes and $a = \SI{5.463 \pm 0.001 }{\AA}$. Therefore, $d = \SI{1.9314 \pm 0.0004}{\AA} $ in this geometry.
+
+Assuming the dominant peaks for lower angle are peaks due to the first order of the diffraction, we correlate those with the well know peaks from literature. The tabulated values for the characteristic peaks of the wolfram anode are from \textit{National Institute of Standards and Technology} (see ref).
+Transforming the peak values given in $\lambda$ into angles in our geometry and taking into account their relative intensity, the peaks are identifiable.
+The observed peaks are the peaks from the \textit{Lyman series} as shown in Figure (fig). To calibrate our device, we assume the the scale is linear and has to parameters to vary: an offset $t$ and the slope $m$. Therefore, we 
+fit a straight line to our data plotted against the theoretical value. As can be seen in Figure (Fig.), the assumption of a linear process is well founded. 
+These two parameters will be used to calibrate our device from now on. Before continuing, we have to verify the aforementioned presupposition that we are observing the first diffraction order.
+Thus, we investigate the spectral range where we would expect the second order of peaks to appear and as show in Figure (fig) we find the expected peaks -- which are also in accordance with the calibration made before.
+
 
