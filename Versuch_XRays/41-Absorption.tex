@@ -33,4 +33,46 @@ fit a straight line to our data plotted against the theoretical value. As can be
 These two parameters will be used to calibrate our device from now on. Before continuing, we have to verify the aforementioned presupposition that we are observing the first diffraction order.
 Thus, we investigate the spectral range where we would expect the second order of peaks to appear and as show in Figure (fig) we find the expected peaks -- which are also in accordance with the calibration made before.
 
+\subsection{Identifying metals due to their absorption edges}
+
+As we plot the spectra against the wavelength or energy, we can see distinct absorption edges. Before analysing those, 
+we want to draw the readers attention to a commonly made mistake when changing the x-scale of intensity spectra.
+
+It is \textbf{not} sufficient to simply rescale the axis to a different quantity, as the relation
+\begin{equation*}
+    I(\theta) \mathrm{d}\theta = I(\lambda) \mathrm{d}\lambda
+\end{equation*}
+has to be fulfilled. Reformulating this in our context using the Bragg equation , we reach the relation 
+\begin{equation}
+    \frac{I(\lambda)}{I(\theta)} = \frac{d \lambda}{d \theta} = \frac{2 d \cos(\theta)}{m}.
+\end{equation}
+This tells us how to rescale the intensity spectrum when changing the dependencies, in this case 
+\begin{equation}
+    I(\lambda) = I(\theta) \cdot  \frac{d \lambda}{d \theta} = I(\theta) \cdot \frac{2 d \cos(\theta)}{m} .
+\end{equation}
+
+When a metal is irradiated with X-rays, strong, irregular absorption bands become visible. These are created when the electrons exceed a certain energy form, they can interact and
+free electrons from lower energy levels of the atom.  This leads to a sharp jump in the absorption.
+This quantity
+\begin{equation}
+    \frac{\mu}{\rho} = \frac{1}{\rho x}\log(\frac{I_0}{I})
+\end{equation}
+
+is derived from the Beer-Lamber law.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{Programming/Absorption/absorptionskanteFit.pdf}
+    \caption[short]{X ray intensity spectrum  of foil 8 plotted against the reference signal. The absorption edge in F8 are well visible.}
+    \label{fig:IntF8ref}
+\end{figure}
+The specific energy at which those jumps take place depend on the internal ergergetically structure of 
+the atom, especially on the number of protons. Therefore, it is possible to distinguish the different metals. For \textit{F8} as shown in (fig), we observe the absorption band at 
+\SI{0.58\pm0.01}{\AA}, which is very close to the wavelength of the K absorption edge of Technetium (Tc) 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[angle = 90, width = 0.95\linewidth]{Programming/Absorption/Elements.pdf}
+    \label{fig:Elements}
+    \caption{Wavelength of the K-edge for different elements with increasing ordinal number. From (ref)}
+\end{figure}
 
