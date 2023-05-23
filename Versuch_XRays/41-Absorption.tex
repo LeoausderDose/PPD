@@ -7,7 +7,7 @@ The setup is able to measure the transmitted intensity in regards to a diffracti
 The thickness $d$ is treated as if it has no deviation. As in spectroscopy, a reference measurement is performed. In the 
 second measurement, one foil at a time is put in place and the measurement is repeated. 
 
-\subsection[Calibration]{Calibration of the device}
+\subsection{Calibration of the device}
 
 Since we are not sure if the calibration of the equipment is correct, we perform our own calibration.
 For this we use the well know characteristic radiation of our Tungsten anode. The sharp peaks should be visible in the 
@@ -28,10 +28,44 @@ with $(hkl) = (220) $ being the Laue indexes and $a = \SI{5.463 \pm 0.001 }{\AA}
 
 Assuming the dominant peaks for lower angle are peaks due to the first order of the diffraction, we correlate those with the well know peaks from literature. The tabulated values for the characteristic peaks of the wolfram anode are from \textit{National Institute of Standards and Technology} (see ref).
 Transforming the peak values given in $\lambda$ into angles in our geometry and taking into account their relative intensity, the peaks are identifiable.
-The observed peaks are the peaks from the \textit{Lyman series} as shown in Figure (fig). To calibrate our device, we assume the the scale is linear and has to parameters to vary: an offset $t$ and the slope $m$. Therefore, we 
+The observed peaks are the peaks from the \textit{Lyman series} as shown in Figure (fig).
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.6\textwidth}
+        \includegraphics[width =\textwidth]{Programming/Absorption/MatchLine1.pdf}      
+        \caption{Matching the first-order diffraction peaks of the tungsten X-ray tube}
+      \label{fig:MatchLine1}
+    \end{subfigure}
+    \hspace{0.1\textwidth}
+    \begin{subfigure}[b]{0.6\textwidth}
+      \includegraphics[width = \textwidth]{Programming/Absorption/MatchLine2.pdf}      
+      \caption{Matching the second-order diffraction peaks of the tungsten X-ray tube}
+      \label{fig:MatchLine2}
+    \end{subfigure}
+    \caption{The peaks in the intensity of the X ray device are matched with the tabulated characteristic radiation peaks.}
+    \label{fig:Peaks}
+\end{figure}
+To calibrate our device, we assume the the scale is linear and has to parameters to vary: an offset $t$ and the slope $m$. Therefore, we 
 fit a straight line to our data plotted against the theoretical value. As can be seen in Figure (Fig.), the assumption of a linear process is well founded. 
 These two parameters will be used to calibrate our device from now on. Before continuing, we have to verify the aforementioned presupposition that we are observing the first diffraction order.
 Thus, we investigate the spectral range where we would expect the second order of peaks to appear and as show in Figure (fig) we find the expected peaks -- which are also in accordance with the calibration made before.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width =\textwidth]{Programming/Absorption/Eichung1ref.pdf}      
+        \caption{Fit for the first-order diffraction}
+      \label{fig:subfig1}
+    \end{subfigure}
+    \hspace{0.1\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
+      \includegraphics[width = \textwidth]{Programming/Absorption/Eichung2ref.pdf}  
+      \caption{Fit for the second order reflection}
+      \label{fig:subfig2}
+    \end{subfigure}
+    \caption{The extracted peaks are compared to the tabulated values and are fitted with a line of the form $y = m\cdot x + t$.}
+    \label{fig:mainfig}
+\end{figure}
 
 \subsection{Identifying metals due to their absorption edges}
 
@@ -59,15 +93,24 @@ This quantity
 \end{equation}
 
 is derived from the Beer-Lamber law.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width = 0.75\textwidth]{Programming/Absorption/absorptionskanteFit.pdf}
-    \caption[short]{X ray intensity spectrum  of foil 8 plotted against the reference signal. The absorption edge in F8 are well visible.}
+    \caption[short]{X-ray intensity spectrum  of foil 8 plotted against the reference signal. The absorption edge in F8 are well visible.}
     \label{fig:IntF8ref}
 \end{figure}
 The specific energy at which those jumps take place depend on the internal ergergetically structure of 
-the atom, especially on the number of protons. Therefore, it is possible to distinguish the different metals. For \textit{F8} as shown in (fig), we observe the absorption band at 
-\SI{0.58\pm0.01}{\AA}, which is very close to the wavelength of the K absorption edge of Technetium (Tc) 
+the atom, especially on the number of protons. Therefore, it is possible to distinguish the different metals. For \textit{F8} as shown in \ref{fig:IntF8ref}, we observe the absorption band at 
+\SI{0.58\pm0.01}{\AA}, which is very close to the wavelength of the K absorption edge of Technetium (Tc), whereas foil 11 has a K edge close to Molybdenum (Mo) and one close to Palladium (Pd). For \textit{F11} we are not sure whether a
+measurement error occurred here, since the absorption does not have the shape we expected. In \textit{F11}'s absorption spectrum, we see two absorption edges to close to be a K edge and L edge. Therefore we expect the foil to consist of two metals.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 12cm]{Programming/Absorption/F8Kedge.pdf}
+    \label{fig:F8edge}
+    \caption{The absorption takes a sharp jump for the foil 8 close to $\lambda$ = \SI{0.58\pm0.01}{\AA}. The errors are calculated from the  relative fluctuations far away from the any peaks. Those are takes as the relative intensity error. It is assumed that the thickness has no deviation.}
+\end{figure}
+
 
 \begin{figure}[ht]
     \centering
@@ -76,3 +119,6 @@ the atom, especially on the number of protons. Therefore, it is possible to dist
     \caption{Wavelength of the K-edge for different elements with increasing ordinal number. From (ref)}
 \end{figure}
 
+
+
+\
