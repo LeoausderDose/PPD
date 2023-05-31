@@ -11,9 +11,9 @@
 
 % Packages
 \documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt]{scrreprt}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage[latin1, utf8]{inputenc}
-\usepackage[babel,german=quotes]{csquotes} %For Quotes
+\usepackage[babel]{csquotes} %For Quotes
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
@@ -21,11 +21,12 @@
 \usepackage{fancyvrb}
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{siunitx}
+\usepackage{physics}
+
 \usepackage{url}
 \usepackage{natbib}
 \usepackage{microtype}
 \usepackage[format=plain]{caption}
-\usepackage{physics}
 \usepackage{titleref}
 
 % Zusätzliche Packages
@@ -36,9 +37,9 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{amsfonts}
 \usepackage{xstring}
-\usepackage{tikz}
-\usepackage{pdfpages}
-\usepackage{booktabs}
+%\usepackage{tikz}
+%\usepackage{pdfpages}
+%\usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage[capitalize]{cleveref}
 \usepackage{subcaption}
@@ -57,6 +58,7 @@
 \renewcommand{\bottomfraction}{1.}
 \renewcommand{\topfraction}{1.}
 \renewcommand{\textfraction}{0.}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 
 %\sc und \bc veraltet. Daher: (20.09.2018)
@@ -72,7 +74,7 @@
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
 \newcolumntype{g}{>{\columncolor[rgb]{ .741,  .843,  .933}}l}
-% Tiefgestellte Zahlen nicht kursiv
+
 
 
 \begin{document}
