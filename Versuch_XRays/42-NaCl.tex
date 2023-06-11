@@ -1,19 +1,16 @@
-
-\newpage
-
 \section{Crystal structure of sodium chloride (NaCl)}
 \label{sec:NaCl}
 
 \subsection*{Structural Analysis}
 
 
-In the following section, we are going to examine the crytsal structure of NaCl. Using the setup described in~\ref{chap:methods} we recieved the measured intensities as function of the angle $2\theta$. The corresponding graph, depicted in fig.~\ref{fig:Peaks}, shows multiple peaks, which result from diffractions at different Miller planes.  
+In the following section, we are going to examine the crytsal structure of NaCl. Using the setup described in~\ref{chap:methods} we recieved the measured intensities as function of the angle $2\theta$. The corresponding graph, depicted in fig.~\ref{fig:PeaksNaCl}, shows multiple peaks, which result from diffractions at different Miller planes.  
 
 \begin{figure}[ht]
     \centering
     \includegraphics[angle = 90, width = 0.8\linewidth]{Bilder/Auswertung/NaCl/Ivs2thwIndices.png}
-    \label{fig:Peaks}
     \caption{The intensity distribution is shown as a function of the angle $2\theta$. The visible and calculated Peaks are labeled with their corresponding Laue indices.}
+    \label{fig:PeaksNaCl}
 \end{figure}
 
 It should be noted, that each peak consists of two subpeaks due to the two slightly different wavelengths of the Cu-K$\alpha$1 line and the Cu-K$\alpha$2 line. Therefore, each peak was fitted, but only the values for the Cu-K$\alpha$1 line were taken in account for further calculations. The corresponding values for the full width at half maximum (FWHM) and the intensity of each peak are stated in tab.~\ref{tab:fitVals}.
@@ -48,7 +45,7 @@ has to be fulfilled. In cubic systems, the distance between to planes $d$ can be
     d_{hkl} = \frac{a^2}{h^2+k^2+l^2}
     \label{eq412}
 \end{equation}
-with the Laue indices $h$, $k$ and $l$ and the lattice parameter $a$. Using $m=1$ equantions~\ref{eq411} and~\ref{eq:412} can be written together as 
+with the Laue indices $h$, $k$ and $l$ and the lattice parameter $a$. Using $m=1$ equantions~\ref{eq411} and~\ref{eq412} can be written together as 
 \begin{equation}
     \sin^2\theta = (h^2+k^2+l^2) \frac{\lambda^2}{4a^2}.
 \end{equation}
@@ -93,8 +90,8 @@ which is exactly what we expected for NaCl~\cite{Toreki2020}. When analyzing the
 \begin{figure}[ht]
     \centering
     \includegraphics[angle = 90, width = 0.8 \linewidth]{Bilder/Auswertung/NaCl/table extinktion marked.png}
-    \label{fig:reflexCond}
     \caption{For each of the reflex groups the fulfilled reflex conditions of the indexed peaks from tab.~\ref{tab:latticeParams} are marked in yellow. Subsequently, only a few point and space groups are left for the description of NaCl; they are marked in green. Table from~\cite{Aroyo2016}}
+    \label{fig:reflexCond}
 \end{figure}
 
 Because further calculations would be far to complicated, we were hinted by the handout for the experiment, that the actual space group is $Fm\overline{3}m$. Remembering, that we found $Z=4$ and our structure is cubic, we assume, that NaCl is a face centered cubic (fcc) with a two atom basis (Na and Cl). Anyhow, we still do not know the basis. Therefore, two structure models $\mathbf{A}$ and $\mathbf{B}$ were suggested, where the coordinates of the atoms are $Na_{\mathbf{A}} = (0,0,0)$, $Cl_{\mathbf{A}} = (0.5,0.5,0.5)$ and $Na_{\mathbf{B}} = (0,0,0)$, $Cl_{\mathbf{B}} = (0.25,0.25,0.25)$, respectively. Due to the fcc-structure additional Na atoms are on positions $(0,0.5,0.5)$, $(0.5,0.5,0)$ and $(0.5,0,0.5)$ and Cl atoms on positions $(0,0,0.5)$, $(0,0.5,0)$ and $(0.5,0,0)$ for model \textbf{A} and $(0.75,0.5,0.5)$, $(0.5,0.5,0.75)$ and $(0.5,0.75,0.5)$ for model \textbf{B}, respectively. The intensity for the reflection on the plane (hkl) is proportional to 
@@ -155,8 +152,8 @@ In fig.~\ref{fig:histoInts}, the intensities of each peak for each model are dis
 \begin{figure}[ht]
     \centering
     \includegraphics[width = 0.8\linewidth]{Bilder/Auswertung/NaCl/IntsModels.png}
-    \label{fig:histoInts}
     \caption{The intensities for the measurement (red) an for both calculated models \textbf{A} (green) and \textbf{B} (blue) are displayed as a histogram. It is clear, that model \textbf{A} suits the measurement far better than model \textbf{B}.}
+    \label{fig:histoInts}
 \end{figure}
 
 \subsection*{Device Function}
@@ -172,6 +169,6 @@ The fitted device function aligns the data perfectly, as can be seen in fig.~\re
 \begin{figure}[ht]
     \centering
     \includegraphics[width = 0.8\linewidth]{Bilder/Auswertung/NaCl/deviceFct.png}
-    \label{fig:devFct}
     \caption{The fitted device function describes the correlation between the FWHM and the angle $\theta$. Although simplifications have been made, the fit aligns perfectly with the data.}
+    \label{fig:devFct}
 \end{figure}
