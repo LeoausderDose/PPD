@@ -135,3 +135,59 @@ In the case of \SI{0.8}{\milli\nauticalmile} ZnTPP, solutions with two different
     \caption{Calculated lifetimes of \SI{0.8}{\milli\nauticalmile} ZnTPP solutions in bn and tol.}
     \label{tab:ZnTPP-bn-tol}
 \end{table}
+
+It is clear, that ZnTPP in tol shows a higher maximum transient absorption value and a lower lifetime compared to ZnTPP in bn. This aligns with the conclusions of the UV-VIS spectroscopy in~\ref{sec:SSS}. Due to the polarity of bn, charges can be induced more easily in the delocalized $\pi$-electron system. Therefore not only a redshift can be observed. It is further possible, that the stronger resonance stability leads to the increase of lifetime.
+
+\subsection*{Using different zinc complexes}
+Not only the zinc complex ZnTPP was measured, but also ZnOEP. Analagous to the recent evaluation, the the transient absorption of \SI{0.8}{\milli\nauticalmile} in bn is shown in fig.~\ref{fig:ZnTPP-ZnOEP} and the lifetimes were calculated via an exponential decay fit (see tab.~\ref{fig:ZnTPP-ZnOEP}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{Bilder/Auswertung/TRAS/ZnTPP-ZnOEP.png}
+    \caption{Data of the transient absorption of \SI{0.8}{\milli\nauticalmile} ZnTPP and ZnOEP in bn. Both complexes have a similar transient absorption value, but ZnOEP shows a faster decay.}
+    \label{fig:ZnTPP-ZnOEP}
+\end{figure}
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{clc}
+        \toprule
+        Sample No. &    Treatment &    $\tau$ / \si{\nano\second} \\
+        \midrule
+        1 &     ZnTPP in bn 0.8mM &  $953 \pm 3$ \\
+        12 &     ZnOEP in bn 0.8mM &  $373 \pm 1$\\
+        \bottomrule
+    \end{tabular}
+    \caption{Calculated lifetimes of \SI{0.8}{\milli\nauticalmile} ZnTPP and ZnOEP solutions in bn.}
+    \label{tab:ZnTPP-ZnOEP}
+\end{table}
+
+While the maximum transient absorption value does not differ much, the lifetime ZnOEP is much shorter than the one for ZnTPP. The maximum TA value corresponds to the maximum concentration of the triplet state and therefore is a measure for the absorption of the pump laser light. The pump laser emits a wavelength of $\lambda = $ \SI{520}{\nano\metre}, which is equivalent to a photon energy of $E_{\gamma} = $ \SI{2.38}{\eV}. When looking at fig.~\ref{fig:ZnTPPZnOEP}, it is clear, that the absorbance at \SI{2.38}{\eV} does not differ much between ZnTPP and ZnOEP. This expains the similar maximum TA values. \par 
+The longer lifetime of ZnTPP may again be explained by the redshift compared to ZnOEP, which can be seen in fig.~\ref{fig:ZnTPPZnOEP}. Due to the four additional phenyl groups in ZnTPP, the conjugated electron system is bigger than in ZnOEP a lower energy is needed to exite the electrons of ZnTPP. Also, the resonance stability increases, which might lead to the longer lifetimes measured.
+
+\subsection*{Influence of the pump laser pulse width}
+To investigate the influence of the pump laser pulse width on the TA signal, we measured the TA of sample 1 using four different pump laser pulse widths. The resulting plot is illustrated in fig.~\ref{fig:pulsewidth}. It is clear, that the increase is the same for all pulse widths. There is a slight shift in the laser delay time for the begin of the decrease, which is not surprising, since that point marks the end of the laser pulse. The plots only differ in the maximum TA value. This aligns our expectations as a longer pump laser puls width should be able to exite more electrons to the triplet state. To check a possible influence of the pump laser pulse width on the lifetimes $\tau$, those were calculated aswell. As can be seen in tab.~\ref{tab:pulsewidth}, the lifetimes do differ a bit, but there is no overall trend visible. Furthermore, the errors are quite big, probably due to the short measurement time. In respect to the errors we find the values to be the same and therefore see no influence of the pump laser pulse width on the lifetime.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{Bilder/Auswertung/TRAS/pulsewidth.png}
+    \caption{Data of the transient absorption of \SI{0.8}{\milli\nauticalmile} ZnTPP in bn using different pump laser pulse widths. The increase of TA is overall the same. The measurements only differ in the maximum TA value, which is higher for longer pulse widths.}
+    \label{fig:pulsewidth}
+\end{figure}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{clc}
+        \toprule
+        pump laser pulse width / ns & $\tau$ / \si{\micro\second} \\
+        \midrule
+        80  &     $1 \pm 0.2$ \\
+        96  &     $0.9 \pm 0.2$\\
+        112 &     $1.1 \pm 0.2$ \\
+        129 &     $0.9 \pm 0.1$\\
+        \bottomrule
+    \end{tabular}
+    \caption{Calculated lifetimes of \SI{0.8}{\milli\nauticalmile} ZnTPP in bn for different pump laser pulse widths.}
+    \label{tab:pulsewidth}
+\end{table}
