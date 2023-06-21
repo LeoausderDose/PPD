@@ -1,0 +1,6 @@
+"D": Dunkelfeld
+"PS": Polarisation senkrecht zum Tisch
+"HF": Hellfeld
+"PP": Polarisation parallel zum Tisch
+
+Bei allen (DF) Bilder, auﬂer _2 wurde die Bleichtungszeit und LED Intensit‰t auf Maximum gedreht!
