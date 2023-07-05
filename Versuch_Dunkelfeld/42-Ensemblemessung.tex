@@ -2,13 +2,12 @@
 % Fortgeschrittenes Physikalisches Praktikum
 % 4.Kapitel Versuchsauswertung
 
-\section{Ensemble measurements}\label{sec:ensemble}
 
 For the ensemble measurements the fourteen samples of rods of different lengths and widths were measured with unpolarized light and light of \ang{0} and \ang{90} polarization each. The measured spectra $I_m$ were corrected using a reference spectrum $I_r$ taken without a sample for each of the three polarization setups. The corrected spectra $I_c$ were thus calculated as
 \begin{equation}
     I_c = \frac{I_m}{I_r}.
 \end{equation}
-Although a dark spectrum $I_d$ was taken as well, it was not used for this evaluation, since $I_m$, $I_r$ and $I_d$ converged to the same intensities for increasing wavelengths and therefore creating singularities when subtracting $I_d$ from both $I_m$ and $I_r$. This could be done since the values for $I_d$ were constant and small for the relevant parts of the wavelength scale. The corrected spectra can be seen in fig.~\ref{fig:unpol}, \ref{fig:pol0} and \ref{fig:pol90}. Using a gaussian function the wavelength for the maximum intensity $\lambda_{max}$ was calculated. All values can be found in tab.~\ref{tab:lamMaxUn},~\ref{tab:lamMax0} and \ref{tab:lamMax90}.
+Although a dark spectrum $I_d$ was taken as well, it was not used for this evaluation, since $I_m$, $I_r$ and $I_d$ converged to the same intensities for increasing wavelengths and therefore created singularities when subtracting $I_d$ from both $I_m$ and $I_r$. This could be done since the values for $I_d$ were constant and small for the relevant parts of the wavelength scale. The corrected spectra can be seen in fig.~\ref{fig:unpol}, \ref{fig:pol0} and \ref{fig:pol90}. Using a gaussian function the wavelength for the maximum intensity $\lambda_{max}$ was calculated. All values can be found in tab.~\ref{tab:lamMaxUn},~\ref{tab:lamMax0} and \ref{tab:lamMax90}.
 
 \begin{figure}
     \centering
@@ -123,5 +122,26 @@ Although a dark spectrum $I_d$ was taken as well, it was not used for this evalu
 
 
     
-As well in fig.~\ref{fig:pol90} as in tab.~\ref{tab:lamMax90} can be seen that in the case of a polarization of \ang{90} the wavelength at the maximum of the intensity spectra does not shift with a varying rodlength. This corresponds to the literature which lets us expect no shifting of the maxima only for the longitudinal modes~\cite{LehrstuhlExperimentalphysikIII.2023}. On the other hand, for the transversal modes (i.e.~a polarization of \ang{0}), a shift of the maximum can be observed in fig.~\ref{fig:pol0} and in tab.~\ref{tab:lamMax0}, both. The unpolarized spectra should show characteristica of transversal and longitudinal modes, as both are excited. This is the case here, as can be seen especially for $w$ = \SI{90}{\nano\meter} (and e.g.~$l$ = \SI{80}{\nano\meter}). Hereby can be seen, that the peaks for the longitudinal modes are smaller as the ones of the transversal modes.
-% maxima 0 unpol correspond
+As well in fig.~\ref{fig:pol90} as in tab.~\ref{tab:lamMax90} can be seen that in the case of a polarization of \ang{90} the wavelength at the maximum of the intensity spectra does not shift with a varying rodlength. This corresponds to the literature which lets us expect no shifting of the maxima for the transversal modes~\cite{LehrstuhlExperimentalphysikIII.2023}. On the other hand, for the longitudinal modes (i.e.~a polarization of \ang{0}), a shift of the maximum can be observed in fig.~\ref{fig:pol0} and in tab.~\ref{tab:lamMax0}, both. The unpolarized spectra should show characteristica of transversal and longitudinal modes, as both are excited. This is the case here, as can be seen especially for $w$ = \SI{90}{\nano\meter} (and e.g.~$l$ = \SI{80}{\nano\meter}). Hereby can be seen, that the peaks for the transversal modes are smaller as the ones of the longitudinal modes (except the cases for $l<w$ for obvious reasons). Further, the calculated maxima for \ang{0} polarization match the calculated maxima for the measurements using unpolarized light. This is a further confirmation of our measurement since \ang{0} polarized light should be part of unpolarized light. \par 
+As stated above, the maximum wavelength $\lambda_{max}$ depends on the rodlength when using \ang{0} polarized light. We expect to find a linear correlation, as the literature states 
+\begin{equation}
+    m \lambda = 2n_{eff}(L(m)+\Delta L),
+\end{equation}
+with the effective refractive index of the plasmon $n_{eff}$ and its resonator length $L(m)+\Delta L$~\cite{LehrstuhlExperimentalphysikIII.2023}. Using the ground mode ($m=1$) one gets 
+\begin{equation}
+    \lambda (L) = 2n_{eff}L + 2n_{eff}\Delta L.
+\end{equation}
+Therefore, a fit was made based on a linear function. This is illustrated in fig.~\ref{fig:rodlength}. Hereby, for $w =$ \SI{70}{\nano\meter} and $w =$ \SI{90}{\nano\meter} the datapoints of $l =$ \SI{130}{\nano\meter} and $l =$ \SI{140}{\nano\meter} as well as the points of $l =$ \SI{70}{\nano\meter} and $l =$ \SI{80}{\nano\meter} just in the case for $w =$ \SI{70}{\nano\meter} were omitted, as they were far off the expectations. In the cases of the former, the intensity curves were very broad (see fig.~\ref{fig:0-70} and~\ref{fig:0-90}) and therefore the maxima may not be calculated as precise as needed.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Bilder/Auswertung/fitRods.png}
+    \caption{The maximum wavelength depends linear on the rodlength as the fitted lines show.}
+    \label{fig:rodlength}
+\end{figure}
+
+Both fitted lines show similar properties. This is up to our expectations since $n_{eff}$ and $\Delta L$ should not depend on the rodlength. Evaluating the slope and y-axis intersection and then averaging over both measurements one yields \par 
+
+\centerline{\boxed{n_{eff} = \num{1.2 \pm 0.3} \qquad \Delta L = \SI{190 \pm 28}{\nano\meter}.}}
+
+$n_{eff}$ seems resonable since a value of $n_{eff} =$1.4 can be used to describe a particle at a water/air interface~\cite{LehrstuhlExperimentalphysikIII.2023}. The values for $\Delta L$ are quite high comparing them with the actual lengths of the rods. That means that the length of the resonator can be over trice the length of the rods themself in our measurements. However, this aligns with the literature, which states, that the plasmonic electrical field outside the plasmon does not exceed \SI{100}{\nano\meter} which would correspond to $\frac{\Delta L}{2}$~\cite{Chen.2013}.
