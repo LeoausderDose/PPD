@@ -15,19 +15,42 @@ def import_tif_image(filepath):
 
     return array
 
+def get_max_index(array):
+    # Flatten the array to a 1D array
+    flattened_array = array.flatten()
+    
+    # Find the index of the maximum value in the flattened array
+    max_index = np.argmax(flattened_array)
+    
+    # Convert the index to 2D coordinates
+    max_row = max_index // array.shape[1]
+    max_col = max_index % array.shape[1]
+    
+    return (max_row, max_col)
+
+
+
 # Example usage
-tif_filepath = 'LSC_nopinhole_40ms_100_1_MMStack_Pos0.ome.tif'
+tif_filepath = 'Versuch_Lightsheet/data/lightsheetCharacterization/NoPinhole/LSC_nopinhole_40ms_100_1/LSC_nopinhole_40ms_100_1_MMStack_Pos0.ome.tif'
 intensity_array = import_tif_image(tif_filepath)
 
 # Rotate the intensity array by 2.5 degrees counterclockwise
 rotated_array = rotate(intensity_array, 2.5)
 
+# Find Index of Maxima and create slices
+
+max_index = get_max_index(rotated_array)
+print(max_index)
+xslice = rotated_array[max_index[0],:]
+yslice = rotated_array[:,max_index[1]]
+
 # Create a heatmap plot of the rotated intensity array
 plt.imshow(rotated_array, cmap='hot', interpolation='nearest')
 
 # Remove ticks on x and y axes
-plt.xticks([])
-plt.yticks([])
+
+# plt.xticks([])
+# plt.yticks([])
 
 # Add a colorbar with a label
 cbar = plt.colorbar(label='Intensity')
