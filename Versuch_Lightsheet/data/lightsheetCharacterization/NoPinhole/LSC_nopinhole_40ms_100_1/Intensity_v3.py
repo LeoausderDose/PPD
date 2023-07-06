@@ -73,7 +73,7 @@ plt.imshow(rotated_array, cmap='hot', interpolation='nearest')   #[:,int(params_
 # Add a colorbar with a label
 
 
-cbar = plt.colorbar(label='Intensity',location = 'bottom')
+cbar = plt.colorbar(label='Intensity / a.u.',location = 'bottom')
 
 # Add a scale bar
 
