@@ -1,0 +1,40 @@
+\section{Differential dynamic microscopy}
+\label{sec:DDM}
+
+In the following section the general principle of differential dynamic microscopy (DDM) is explained. The concrete implementation of DDM
+in the form of lightsheet microscopy is explained in (ref).
+
+DDM is a special version of optical microscopy. The experimentalist uses tools of Fourier optics to extract information about the 
+diffusivity. This is even possible below the diffraction limit. The displacement of the particles can be represented in the integral 
+\begin{equation}
+    \sigma^2(\Delta t) = \int |D(x,y,\Delta t)|^2 dx dy
+\end{equation}
+with D being the difference signal $D(x,y,\Delta t) = I(x,y,\Delta t) -I(x,y,\Delta t =0)$. In our case $I(x,y,\Delta t)$ is the intensity i our our 
+picture with the timestamp $\Delta t $ compared to the first picture with $I(x,y,\Delta t = 0)$ \cite{Cerbino.2008}. Parcevals theorem tells us that all information
+contained in the special data has to be contained in the Fourier modes as 
+\begin{equation}
+    \int |D(x,y,\Delta t)|^2 dx dy = \sigma^2(\Delta t) = \int |F_D(u_x,u_y,\Delta t)|^2 du_x du_y
+\end{equation}
+with $F_D$ being the Fourier transform of D \cite{Butz.2012}. As the sample is isotropic a in the sample and across time, the 2D spectrum 
+can be turned in the $(u_x, u_y)$ plane and therefore all relevant information can be transferred to a 1D spectrum of $u = \sqrt{u_x^2+u_y^2}$. To make data comparible to 
+"normal" scattering data, the wave vector $q = 2\pi u$ can be calculated. 
+
+The data in the Fourier space can be well described using the formula
+\begin{equation}
+    |F_D(q,\Delta t)|^2 = A(q)[1- \exp(-\frac{\Delta t}{\tau (q)})] +B(q)
+\end{equation}
+assuming Brownian motion for the particles~\cite{Berne.2013}. The equation contains of two main terms. The $B(q)$ term reprents the 
+noise e.g. from the detector. The other term represents the diffusion process, with $A(q)$ as scaling factor related to quantities such as concentration, 
+interaction strength with the light and incoming intensity. It is empirically generated from the data by fitting. $\tau$ is 
+\begin{equation}
+    \tau = \frac{1}{D_m \cdot q^2}
+\end{equation} 
+with the diffusivity $D_m$ for a Brownian motion. The total process of DDM is represented in \cref{fig:DataTreatDDM}.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = \textwidth]{Bilder/Theory/SchematicDDMEdit.pdf}
+    \caption{Schematic representation of the DMM data treatment process. Edited from~\cite{Struntz.2017}}
+    \label{fig:DataTreatDDM}
+\end{figure}
