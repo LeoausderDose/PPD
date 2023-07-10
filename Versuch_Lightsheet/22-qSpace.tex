@@ -1,0 +1,25 @@
+\section{The q-space}
+\label{sec:qSpace}
+
+The q space is a representation of the real space in terms of frequencies. As the real space observed shows limitations, 
+the q space has to reflect these limitations too. The limits are given by the bounds in real space, which translate to the 
+Fourier space as follows:
+\begin{equation}
+    \frac{2\pi}{l_{\mathrm{max}}}<q < \frac{2\pi}{l_{\mathrm{min}}}.
+    \label{eq:qspace}
+\end{equation}
+Here, the maximum dimension $l_{max}$ in our image is the length of the image, while the minimum resolution object is one pixel. 
+
+To resolve the diffusion, also have to take into account the temporal limitations connected to our total time $T_{\mathrm{exp}}$ of the experiment. If the 
+particle has not moved at least one pixel in this time, we can not detect a change as he is to slow. The same is true for the fast particles. If the particle
+disappears from the image in the timescale of the shutter speed $T_{\mathrm{shutter}} $, it can not be detected.  
+
+The displacement for a Brownian motion is given by 
+\begin{equation}
+    \Delta x^2 \propto  D_{\mathrm{m}} t   \Rightarrow \Delta x = \pm \sqrt{D_{\mathrm{m}} t}.
+\end{equation}
+Now we insert this relation into the minimal and maximal resolvable displacements as described in \cref{eq:qspace} and arrive at 
+\begin{equation}
+    \frac{1}{\sqrt{D_{\mathrm{m}} T_{\mathrm{exp}}}} < q < \frac{1}{\sqrt{D_{\mathrm{m}} T_{\mathrm{shutter}}}}
+\end{equation}
+as limitation to the representation of diffusion in our setup. 
