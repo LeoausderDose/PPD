@@ -5,5 +5,23 @@ When we do experiments, we leave the ideal framework of theory. Instead, we ente
 preconditions, we want to offer a solution on how to better fit the prediction to the real data.
 
 The first aspect, that we want to take into account is the polydispersity of the 
-used materials. As there can be aggregate formation in our solution, not all particles do have the same size. This changes the 
-former equation from  
+used materials. As there can be aggregate formation in our solution, not all particles do have the
+same size. This changes the diffusivity in the particles and can be corrected using an adjusted 
+formula 
+\begin{equation}
+    |F_D(q,\Delta t)|^2 = A(q)[1- g(q, \Delta t)] +B(q).
+\end{equation}
+
+The easies way to correct the polydispersity by using a stretched exponential
+\begin{equation}
+    g(q,\Delta t) = \exp(-\left(\frac{\Delta t}{\tau}\right)^{\alpha (q)})
+\end{equation}
+with $\alpha (q) $ as single stretch parameter~\cite{Wulstein.2016}. Futhermore, a cumulant fit function could be used.
+
+The second aspect that we can correct is having a directed flow in the sample. The problem of directional flow is that it breaks the isotropy. 
+The first option would be to correct the motion by moving a cut out from the photo across the picture and analising this 
+frame. The speed of the frame can be determined by analysing the centre of gravity of the permanently visible objects. 
+An other idea would be to disconnect $g(\vec{q}, t)$ for diffusion and other system inherent processes to 
+\begin{equation}
+    g(\vec{q}, t) = g_{\mathrm{diffusion}} \cdot g_{\mathrm{system}} .
+\end{equation}
