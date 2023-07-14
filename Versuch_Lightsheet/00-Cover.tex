@@ -41,25 +41,26 @@
 			
 	\centering
 	{\LARGE \sffamily {\textbf{\bottom}\par}}
-	\vspace{2,5cm}
+	\vspace{2cm}
     {\fontsize{40}{0}\sffamily\ruleline{\textcolor{\farbe}{\textbf{\fach}}}\par}
-    \vspace{6cm}
+    \vspace{4cm}
 	{\Large\sffamily \ruleline{\name}\par}
 	
 	
-	% Choose Text
-	\ifthenelse{\equal{\uberschrift}{s}} {\def\titel{Skript}}	
-		{\ifthenelse{\equal{\uberschrift}{k}} {\def\titel{Klausur}}
-			{\ifthenelse{\equal{\uberschrift}{u}} {\def\titel{Übung}}
-				{\ifthenelse{\equal{\uberschrift}{e}} {\def\titel{Klausur \\[0,5cm] Ergebnis}}
-					{\def\titel{\uberschrift}}
-				}
-			}
-		}
+	% % Choose Text
+	% \ifthenelse{\equal{\uberschrift}{s}} {\def\titel{Skript}}	
+	% 	{\ifthenelse{\equal{\uberschrift}{k}} {\def\titel{Klausur}}
+	% 		{\ifthenelse{\equal{\uberschrift}{u}} {\def\titel{Übung}}
+	% 			{\ifthenelse{\equal{\uberschrift}{e}} {\def\titel{Klausur \\[0,5cm] Ergebnis}}
+	% 				{\def\titel{\uberschrift}}
+	% 			}
+	% 		}
+	% 	}
 	
-	\begin{textblock*}{21cm}(0cm,9cm) % {block width} (coords), centered		
-		{\fontsize{\schriftgrosse}{0}\sffamily\textcolor{\farbe}{\textbf{\titel}}\par}
-	\end{textblock*}
+		\begin{textblock*}{21cm}(0cm,9cm) % {block width} (coords), centered		
+			{\Huge \textbf{\uberschrift}} \\[3ex]
+			%{\fontsize{\schriftgrosse}{0}\sffamily\textcolor{\farbe}{\textbf{\titel}}\par}
+		\end{textblock*}
 	
 	% Choose Logo
 	\ifthenelse {\equal{\farbe}{Notared}} {\def\logo{Bilder/Logo/UniBTNotared}}
@@ -80,7 +81,7 @@
 	\IfSubStr{\logo}{noLogo}{\setboolean{symbol}{false}}{\setboolean{symbol}{true}}
 	
 	% Gruppe
-	\vspace{10cm}
+	\vspace{11cm}
 	{\large\sffamily{Group \groupnr}}
 	
 	%Logo
@@ -91,7 +92,7 @@
 			\begin{figure}[h]
 			\begin{center}
 				
-				\includegraphics[width=2cm]{\logo}
+				\includegraphics[width=3cm]{\logo}
 				
 			\end{center}
 			\end{figure}
