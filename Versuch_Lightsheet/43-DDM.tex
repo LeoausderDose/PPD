@@ -1,9 +1,10 @@
 \section{Differential Dynamic Microscopy}\label{sec:DDMDis}
-The measured datasets were evaluated using a provided matlab script, which first calculated the dynamic structure function $D(q,\Delta t)$ for exponential increasing time differences $\Delta t$. Therefore, the difference intensities 
+In the following section, the DDM analysis is carried out.\\
+The measured datasets were evaluated using a provided matlab script which first calculated the dynamic structure function $D(q,\Delta t)$ for exponential increasing time differences $\Delta t$. Therefore, the difference intensities 
 \begin{equation}
     \Delta I(x,y,\Delta t) = I(x,y,t+\Delta t) - I(x,y,t)
 \end{equation}
-were transformed into the fourier space intensities $\Delta I(q_x,q_y,\Delta t)$ using a 2d fast fourier trasform algorithm. $D(q,\Delta t)$ is obtained by averiging radial over the dynamic structure function 
+were transformed into the fourier space intensities $\Delta I(q_x,q_y,\Delta t)$ using a 2d fast fourier transform algorithm. $D(q,\Delta t)$ is obtained by averiging radially over the dynamic structure function 
 \begin{equation}
     D(q_x,q_y,\Delta t) = \langle |\Delta I(x,y,\Delta t)|^2 \rangle.
 \end{equation}
@@ -61,14 +62,14 @@ and therefore the log-log-plot of $\tau (q)$ against $q$ should be a straight li
 \end{table}
 
 When looking at the selected $q$ ranges, it can be seen that for the 4x4 binning the resolution for small $q$ gets worse in comparison to smaller binning. This fulfills our expectations since due to the binning, more pixels are summarized to one. Therefore, the minimum evaluation length in our ROI increases and the resolution for small $q$ decreases (see also sec.~\ref{sec:qSpace}). However, we would also expect a smaller resolution for big $q$ with an decreasing ROI size, following the same argument. This we could not observe. In fact, the resoultion even increases and is best for the smallest ROI size (64x64 px). This might be due to a better measuring procedure after having done some measurements already. \\
-We also observe in general smaller uncertainties and better fits for the closed aperture. This is expectable, since ,as shown in sec.~\ref{sec:LightSheet}, the thickness of the lightsheet decreases with the beam diameter. \\
-Within a certain setup, the calculated values are more or less the same within the uncertainties. However, a change in setup leads to a different obtained $D_m$ value. This is suprising, since the probe did not change. Therefore, we assume, that binning and the ROI size has an effect on the measurement quality. To verify our calculated values, the theoretical value shall be estimated. As we are at diffusie timescales, the Stokes Einstein equation can be used, which proposes a diffusion constant of 
+We also observe in general smaller uncertainties and better fits for the closed aperture. This is expectable, since, as shown in sec.~\ref{sec:LightSheet}, the thickness of the lightsheet decreases with the beam diameter. \\
+Within a certain setup, the calculated values are more or less the same within the uncertainties. However, a change in setup leads to a different obtained $D_m$ value. This is suprising, since the probe did not change. Therefore, we assume, that binning and the ROI size have an effect on the measurement quality. To verify our calculated values, the theoretical value shall be estimated. As we are at diffusive timescales, the Stokes-Einstein-equation can be used, which proposes a diffusion constant of 
 \begin{equation}
     D_{SE} = \frac{k_BT}{6 \pi \eta R_0}
 \end{equation}
-with the dynamic viscosity $\eta$ and the radius of the particle $R_0$. $\eta$ of the \SI{1}{\percent}wt agarose solution depends on various parameters, such as temperature, solvent properties etc. However, for our estimation, we assume $\eta = $\SI{0.01}{\pascal\second}. Further, in this experiment, $T=$\SI{300}{\kelvin} and $R_0=$\SI{100}{\nano\meter}. This leads to a theoretical value of 
+with the dynamic viscosity $\eta$ and the radius of the particle $R_0$. $\eta$ of the bead solution depends on various parameters, such as temperature, solvent properties etc. However, for our estimation, we assume $\eta = $\SI{0.001}{\pascal\second}. Further, in this experiment, $T=$\SI{300}{\kelvin} and $R_0=$\SI{100}{\nano\meter} are fixed. This leads to a theoretical value of 
 \begin{equation}
-    D_{SE} = \SI{0.22}{\micro\meter^2 \per\second}.
+    D_{SE} = \SI{2.20}{\micro\meter^2 \per\second}.
 \end{equation}
 
-This value corresponds best to the values with the maximum binning and the minimum ROI size in our measurement. This is surpising since we expect binning to decrease the measurement accuracy because the information of several pixels get summarized in only a single one, especially since the pixelsize is $d_{px} = $\SI{162.5}{\nano\meter} and therefore in the size range of the particles themselves. Additional binning therefore should not be able to sufficiently track the diffusion of the particles. Also the decrease in measurement area should lead to a maximum equal good result, since less information is gathered. The simplifications made (no flow present, 2d analysis of 3d diffusion) shlould not be an explanation for this discrepancy since those all overestimate the diffusion and therefore corrections would only increase the difference between expected and calculated values. We hence suppose that the error might be in the estimation of the theoretical value of $D_{SE}$ as especially the value for $\eta$ is quite uncertain, $D_{SE}$ may also vary in one order of magnitude which would lead to a support of the values of the non binned, big ROI sized setup.
+This value corresponds best to the values with the minimum binning and the maximum ROI size in our measurement. This is not surpising since we expect binning to decrease the measurement accuracy because the information of several pixels get summarized in only a single one, especially since the pixelsize is $d_{px} = $\SI{162.5}{\nano\meter} and therefore in the size range of the particles themselves. Additional binning therefore should not be able to sufficiently track the diffusion of the particles. Also an increased measurement area should lead to better results, since more information is gathered. The most suitable value is furthermore found for a close pinhole. This can also be expected since it corresponds to the thinnest lightsheet and therefore the best resolution. 
